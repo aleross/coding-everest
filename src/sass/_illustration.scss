@@ -143,40 +143,66 @@ div:before, div:after {
 }
 
 #tent {
-    position: relative;
-    margin-left: 50px;
+    position: absolute;
+    right: 200px;
+    top: 80px;
+
+    // Ceiling
     &:before {
-        width: 100px;
-        height: 50px;
-        background: #FD952E;
+        width: 50px;
+        height: 25px;
+        background: transparent;
         transform: skewX(20deg) rotate(-15deg);
     //    border-bottom: 1px solid #000;
+        background: #E07A2E;
         box-shadow:
-                0 0 0 1px #c3622e;
+                inset 0 -2px 0 10px #FD952E,
+                0 0 0 1px #c3622e,
+                0 0 0 0 #c3622e;
     }
-    &:after {
-    //    background: #FD952E;
-        top: 200px;
-        height: 0;
-        width: 0;
-        border-left: 10px solid transparent;
-        border-right: 20px solid transparent;
-        border-bottom: 20px solid #FD952E;
-        border-top: 0 none;
-        box-shadow: 0 1px #c3622e;
-        transform: rotate(90deg);
-    }
-    span {
+
+    // Tent base
+    span:nth-child(1) {
         display: block;
         position: absolute;
         background: #FD952E;
-        height: 20px;
-        width: 87px;
-        box-shadow:
-                0 0 0 1px #c3622e;
+        height: 10px;
+        width: 43px;
+        box-shadow: 0 0 0 1px #c3622e;
         transform: skewY(-17deg) rotate(0deg);
-        top: 50px;
-        left: 22px;
+        top: 25px;
+        left: 11px;
+    }
+
+    // Flap 1
+    &:after {
+    //    background: #FD952E;
+        top: 16px;
+        left: -15px;
+        height: 0;
+        width: 10px;
+        border-left: 25px solid transparent;
+        border-right: 0 solid transparent;
+        border-bottom: 16px solid #FD952E;
+        border-top: 0 none;
+        box-shadow: 1px 1px #c3622e;
+        transform: rotate(90deg);
+    }
+
+    // Flap 2
+    span:nth-child(2) {
+        display: block;
+        position: absolute;
+        top: 16px;
+        left: -31px;
+        height: 0;
+        width: 10px;
+        border-left: 25px solid transparent;
+        border-right: 0 solid transparent;
+        border-bottom: 16px solid #FD952E;
+        border-top: 0 none;
+        box-shadow: 1px 1px #c3622e;
+        transform: rotate(90deg) scaleY(-1);
     }
 }
 
@@ -211,29 +237,14 @@ div:before, div:after {
     background-position: top center;
 
     list-style-type: none;
-    right: 30px;
+    left: 30px;
     top: 100px;
 
     &:nth-child(2) {
-        right: 100px;
+        left: 100px;
         top: 120px;
         li {
             border-bottom-color: #1e5723;
-        }
-    }
-
-    &:nth-child(3) {
-        left: -280px;
-        top: 120px;
-        li {
-            border-bottom-color: #13871f;
-        }
-    }
-
-    &:nth-child(4) {
-        left: -200px;
-        li {
-            border-bottom-color: #1c5f23;
         }
     }
 
