@@ -961,7 +961,8 @@ div:before, div:after {
 
 html, body {
   height: 100%;
-  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
+  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  overflow-x: hidden; }
 
 #mockup {
   position: absolute;
